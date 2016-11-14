@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Массив</title>
+</head>
+<body>
+	<script>
+		var lang = [];
+		var arr = [{
+                name: prompt("Введіть імя?"),
+                age: prompt("Введіть вік?"),
+                lang: [
+                    lang1 = prompt("Введіть мову програмування яку знаєте?"),
+                	lang2 = prompt("Введіть мову програмування яку знаєте?"),
+                	lang3 = prompt("Введіть мову програмування яку знаєте?")
+                ]
+                
+            },{
+                name:prompt("Введіть імя?"),
+                age: prompt("Введіть вік?"),
+                lang: [
+                    lang1 = prompt("Введіть мову програмування яку знаєте?"),
+                    lang2 = prompt("Введіть мову програмування яку знаєте?"),
+                    lang3 = prompt("Введіть мову програмування яку знаєте?")
+                ]
+                
+            },{
+                name:prompt("Введіть імя?"),
+                age: prompt("Введіть вік?"),
+                lang: [
+                    lang1 = prompt("Введіть мову програмування яку знаєте?"),
+                    lang2 = prompt("Введіть мову програмування яку знаєте?"),
+                    lang3 = prompt("Введіть мову програмування яку знаєте?")
+                ]
+                
+            }
+        ];
+        console.log(arr);
+        for (var i =0; i < arr.length; i++) {
+            for(field in arr[i]) {
+                document.write(field+": "+arr[i][field]+"</br>")
+            }
+        }
+            
+        
+        document.write("<br/>"+"<hr>");
+    
+	</script>
+</body>
+</html>
