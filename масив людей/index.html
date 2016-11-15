@@ -6,45 +6,41 @@
 </head>
 <body>
 	<script>
-		var lang = [];
-		var arr = [{
-                name: prompt("Введіть імя?"),
-                age: prompt("Введіть вік?"),
-                lang: [
-                    lang1 = prompt("Введіть мову програмування яку знаєте?"),
-                	lang2 = prompt("Введіть мову програмування яку знаєте?"),
-                	lang3 = prompt("Введіть мову програмування яку знаєте?")
-                ]
-                
-            },{
-                name:prompt("Введіть імя?"),
-                age: prompt("Введіть вік?"),
-                lang: [
+    
+    var save = [0];
+    var person = {};
+		function ask(){
+            person = {
+            name: prompt("Введите свое имя:"),
+            sname: prompt("Введите свою фамилию:"),
+            age: prompt("Введите свой возраст:"),
+            lang: [
                     lang1 = prompt("Введіть мову програмування яку знаєте?"),
                     lang2 = prompt("Введіть мову програмування яку знаєте?"),
                     lang3 = prompt("Введіть мову програмування яку знаєте?")
                 ]
-                
-            },{
-                name:prompt("Введіть імя?"),
-                age: prompt("Введіть вік?"),
-                lang: [
-                    lang1 = prompt("Введіть мову програмування яку знаєте?"),
-                    lang2 = prompt("Введіть мову програмування яку знаєте?"),
-                    lang3 = prompt("Введіть мову програмування яку знаєте?")
-                ]
-                
-            }
-        ];
-        console.log(arr);
-        for (var i =0; i < arr.length; i++) {
-            for(field in arr[i]) {
-                document.write(field+": "+arr[i][field]+"</br>")
-            }
-        }
+        };
+    }
+    function say() {
+                     for (var i = 0; i < save.length; i++) {
+           for (field in save[i]) {
+            document.write(field+": "+save[i][field]+"</br>");
+           }
+           document.write("<hr>");
+    }   
+}
+        do{
+            ask();
+            save.push(person);
+            var returner = confirm("Ви бажаєте повторити дію?");
+            
+            
+        }while(returner);
+       say(); 
+        
             
         
-        document.write("<br/>"+"<hr>");
+        
     
 	</script>
 </body>
